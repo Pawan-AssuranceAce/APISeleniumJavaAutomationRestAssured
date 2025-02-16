@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1">
+    <classes>
+      <class name="day8.CreateUser"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test2">
+    <classes>
+      <class name="day8.GetUser"/>	
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Test3">
+    <classes>
+      <class name="day8.UpdateUser"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test4">
+    <classes>
+      	<class name="day8.DeleteUser"/>
+    </classes>
+  </test> <!-- Test -->
+  <!-- Here context.setAttribute("user_id", id) wont be pass to other class becoz context.setAttribute("user_id", id) is saved for test1 alone and other classes are running as part of
+  other test need to go back to create class and need to replase context.setAttribute("user_id", id) to context.getSuite().setAttribute("user_id", id) this will set the attribute at suite level-->
+</suite> <!-- Suite -->
